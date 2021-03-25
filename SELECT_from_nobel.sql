@@ -37,3 +37,31 @@ SELECT * FROM nobel
   -- 10. Show year, subject, and name of people who won a 'Medicine' prize in an early year (before 1910, not including 1910) together with winners of a 'Literature' prize in a later year (after 2004, including 2004)
   SELECT * FROM nobel WHERE subject = 'Medicine' AND yr < 1910 OR subject = 'Literature' AND yr >= 2004
   -- 11. 
+
+  // MySql Tutorial
+  -- WHERE is used to filter result
+  -- DISTINCT is used to make query result unique
+  -- AS is used to change the title of a returned column
+  --
+
+  -- 1. SELECT 
+            name,
+            unit_price,
+            unit_price * 1.1 AS 'new price'
+        FROM products
+
+  -- 2. SELECT * 
+        FROM orders
+        WHERE order_date >= '2019-01-01'
+
+  -- 3. SELECT * FROM order_items
+        WHERE order_id=6 AND unit_price * quantity > 30
+
+  --4. SELECT * FROM products 
+        WHERE quantity_in_stock IN (49,38,72)
+
+  --5. SELECT * FROM customers WHERE birthdate BETWEEN  '1990-01-01' AND '2000-01-01'
+
+  --6. SELECT * FROM customers WHERE address LIKE '%TRAIL%' OR address LIKE '%AVENUE%'
+
+  --7. SELECT * FROM  customers WHERE phone_number LIKE '%9'
